@@ -1,0 +1,14 @@
+extends ../layout.jade
+block scripts
+  console.log("Do like this if you want to do inline js on this particular page")
+  console.log("Or do as below to include js files only on this page")
+  script.
+    var sessiondata=!{sessiondetails};
+  script(src='//static.opentok.com/webrtc/v2.2/js/TB.min.js')
+  script(src="#{staticURL}/scripts/toksession.js")
+block main
+  #subcont(style="width:1040px;height:840px;border-radius: 15px 50px;background: #8AC007;padding: 20px;")
+    #subscribers
+  #pubcont(style="border-radius: 15px 50px;background: #8AC007;padding: 20px;")
+    #publisher
+block post_wrap
